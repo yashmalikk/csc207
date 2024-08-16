@@ -7,7 +7,7 @@
 class Encoder {
   /**
    * This class contains the Encoding algorithm and is only called when user writes "encode" in input
-   * @param Pt  - String with the plaintext, using Pt here to distinguish from 'plaintext' param. in InputHandling class 
+   * @param Pt  - string with the plaintext, using Pt here to distinguish from 'plaintext' param. in InputHandling class 
    * @param keyword - String with the key used to encode the plaintext
    */
 
@@ -17,11 +17,13 @@ class Encoder {
       char keyletter = keyword.charAt(i % keyword.length());
       int key = (int) keyletter - 'a'; 
       int asciival = (int) letter + key;
+      
       if (asciival > 'z') {
-          asciival -= 26;
+        asciival -= 26;
       }
+
       else if (asciival < 'a') {
-          asciival += 26;
+        asciival += 26;
       }
       
       char modletter = (char) asciival;
@@ -43,9 +45,11 @@ class Decoder {
       char keyletter = keyword.charAt(i % keyword.length());
       int key = (int) keyletter - 'a';
       int asciival = (int) letter - key;
+
       if (asciival > 'z') {
         asciival -= 26;
-        }
+      }
+
       else if (asciival < 'a') {
         asciival += 26;
       }
@@ -67,7 +71,8 @@ class InputHandling {
       System.err.println("Incorrect number of parameters");
       System.out.println();
       System.exit(2);
-  }
+    }
+
     if (args.length == 2) {
       System.out.println(args[1]);
       System.out.println();
@@ -104,8 +109,8 @@ public class VigenereCipher {
    * @param args - array of passed arguments
    */
   public static void main(String args[]) {
-      InputHandling.argno(args);
-      InputHandling.command(args[0], args[1], args[2]);
-      System.out.println();
+    InputHandling.argno(args);
+    InputHandling.command(args[0], args[1], args[2]);
+    System.out.println();
   }
 }
