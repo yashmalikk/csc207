@@ -14,12 +14,15 @@ class Encoder{
     for (int i = 0; i < Pt.length(); i++) {
      char letter = Pt.charAt(i);
      int asciival = (int)letter + key;
+
      if (asciival > 122) {
       asciival = asciival - 26;
-     }
+    }
+
      else if (asciival < 97) {
       asciival = asciival + 26;
      }
+
      char modletter = (char) asciival;
      System.out.print(modletter); 
     }
@@ -37,12 +40,15 @@ class Decoder{
     for (int i = 0; i < Ct.length(); i++) {
      char letter = Ct.charAt(i);
      int asciival = (int)letter - key;
+
      if (asciival > 122) {
       asciival = asciival - 26;
      }
+
      else if (asciival < 97) {
       asciival = asciival + 26;
      }
+
      char modletter = (char) asciival;
      System.out.print(modletter); 
     }
