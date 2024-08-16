@@ -1,3 +1,9 @@
+/**
+ * Made by Yash Malik
+ * For CSC-207 Fall 2024 with Professor Rebelsky
+ * Mini-Project Number 1
+*/
+
 class Encoder{
   public static void encodingAlgo(String Pt, int key){
     for (int i = 0; i < Pt.length(); i++) {
@@ -38,6 +44,7 @@ class InputHandling{
   public static void argno(String args[]){
     if (args.length != 2){
       System.err.println("Incorrect number of parameters");
+      System.out.println();
       System.exit(2);
     }
   }
@@ -45,7 +52,8 @@ class InputHandling{
   public static void command(String cmd, String plaintext){
     if (!cmd.equals("encode") && !cmd.equals("decode")) {
       System.err.println("Valid options are \"encode\" or \"decode\"");
-        System.exit(1);
+      System.out.println();
+      System.exit(1);
     }
 
     if (cmd.equals("encode")) {
