@@ -35,7 +35,7 @@ class Encoder {
 
 class Decoder {
   /**
-   * This class contains the Decoding algorithm and is only called when user writes "encode" in input
+   * This class contains the Decoding algorithm and is only called when user writes "decode" in input
    * @param Ct  - String with the ciphertext, using Ct here to maintain consistency with Encoder class 
    * @param keyword - String with the key used to decode the ciphertext
    */
