@@ -12,19 +12,19 @@ class Encoder{
    */
   public static void encodingAlgo(String plaintext, int key){
     for (int i = 0; i < plaintext.length(); i++) {
-     char letter = plaintext.charAt(i);
-     int asciival = (int)letter + key;
+      char letter = plaintext.charAt(i);
+      int asciival = (int)letter + key;
 
-     if (asciival > 122) {
-      asciival = asciival - 26;
-    }
+      if (asciival > 122) {
+        asciival = asciival - 26;
+      }
 
-     else if (asciival < 97) {
-      asciival = asciival + 26;
-     }
+      else if (asciival < 97) {
+        asciival = asciival + 26;
+      }
 
-     char modletter = (char) asciival;
-     System.out.print(modletter); 
+      char modletter = (char) asciival;
+      System.out.print(modletter); 
     }
     System.out.println();
   }
@@ -38,19 +38,19 @@ class Decoder{
    */
   public static void decodingAlgo(String ciphertext, int key){
     for (int i = 0; i < ciphertext.length(); i++) {
-     char letter = ciphertext.charAt(i);
-     int asciival = (int)letter - key;
+      char letter = ciphertext.charAt(i);
+      int asciival = (int)letter - key;
 
-     if (asciival > 122) {
-      asciival = asciival - 26;
-     }
+      if (asciival > 122) {
+        asciival = asciival - 26;
+      }
 
-     else if (asciival < 97) {
-      asciival = asciival + 26;
-     }
+      else if (asciival < 97) {
+        asciival = asciival + 26;
+      }
 
-     char modletter = (char) asciival;
-     System.out.print(modletter); 
+      char modletter = (char) asciival;
+      System.out.print(modletter); 
     }
     System.out.println();
   }
