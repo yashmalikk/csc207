@@ -1,5 +1,5 @@
 /**
- * Made by Yash Malik
+ * @author Yash Malik
  * For CSC-207 Fall 2024 with Professor Rebelsky
  * Mini-Project Number 1
  */
