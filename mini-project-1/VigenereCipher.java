@@ -10,7 +10,6 @@ class Encoder {
    * @param plaintext  - string with the plaintext
    * @param keyword - String with the key used to encode the plaintext
    */
-
   public static void encodingAlgo(String plaintext, String keyword) {
     for (int i = 0; i < plaintext.length(); i++) {
       char letter = plaintext.charAt(i);
@@ -56,8 +55,8 @@ class Decoder {
       
       char modletter = (char) asciival;
       System.out.print(modletter);
-  }
-  System.out.println();
+    }
+    System.out.println();
   }
 }
 
