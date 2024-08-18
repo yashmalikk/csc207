@@ -7,13 +7,13 @@
 class Encoder {
   /**
    * This class contains the Encoding algorithm and is only called when user writes "encode" in input
-   * @param Pt  - string with the plaintext, using Pt here to distinguish from 'plaintext' param. in InputHandling class 
+   * @param plaintext  - string with the plaintext
    * @param keyword - String with the key used to encode the plaintext
    */
 
-  public static void encodingAlgo(String Pt, String keyword) {
-    for (int i = 0; i < Pt.length(); i++) {
-      char letter = Pt.charAt(i);
+  public static void encodingAlgo(String plaintext, String keyword) {
+    for (int i = 0; i < plaintext.length(); i++) {
+      char letter = plaintext.charAt(i);
       char keyletter = keyword.charAt(i % keyword.length());
       int key = (int) keyletter - 'a'; 
       int asciival = (int) letter + key;
@@ -36,12 +36,12 @@ class Encoder {
 class Decoder {
   /**
    * This class contains the Decoding algorithm and is only called when user writes "decode" in input
-   * @param Ct  - String with the ciphertext, using Ct here to maintain consistency with Encoder class 
+   * @param ciphertext  - String with the ciphertext 
    * @param keyword - String with the key used to decode the ciphertext
    */
-  public static void decodingAlgo(String Ct, String keyword) {
-    for (int i = 0; i < Ct.length(); i++) {
-      char letter = Ct.charAt(i);
+  public static void decodingAlgo(String ciphertext, String keyword) {
+    for (int i = 0; i < ciphertext.length(); i++) {
+      char letter = ciphertext.charAt(i);
       char keyletter = keyword.charAt(i % keyword.length());
       int key = (int) keyletter - 'a';
       int asciival = (int) letter - key;
@@ -83,10 +83,10 @@ class InputHandling {
   /**
    * Executes appropriate command based on first argument (i.e. encode or decode)
    * @param cmd - first argument
-   * @param plaintext - second argument
+   * @param userinput - second argument
    * @param keyword - third argument
    */
-  public static void command(String cmd, String plaintext, String keyword) {
+  public static void command(String cmd, String userinput, String keyword) {
     if (!cmd.equals("encode") && !cmd.equals("decode")) {
       System.err.println("Valid options are \"encode\" or \"decode\"");
       System.out.println();
@@ -94,11 +94,11 @@ class InputHandling {
     }
 
     if (cmd.equals("encode")) {
-      Encoder.encodingAlgo(plaintext, keyword); 
+      Encoder.encodingAlgo(userinput, keyword); 
     }
 
     if (cmd.equals("decode")) {
-      Decoder.decodingAlgo(plaintext, keyword);
+      Decoder.decodingAlgo(userinput, keyword);
     }
   }
 }
