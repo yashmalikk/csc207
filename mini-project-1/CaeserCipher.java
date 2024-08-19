@@ -6,11 +6,13 @@
 
 class Encoder{
   /**
-   * This class contains the Encoding algorithm and is only called when user writes "encode" in input
+   * The encoding algorithm which takes one letter from the string and shifts by the key value
    * @param plaintext  - String with the plaintext
    * @param key - int with the key used to encode the plaintext
    */
   public static void encodingAlgo(String plaintext, int key){
+    java.io.PrintWriter pen;
+    pen = new java.io.PrintWriter(System.out, true);
     for (int i = 0; i < plaintext.length(); i++) {
       char letter = plaintext.charAt(i);
       int asciival = (int)letter + key;
@@ -24,19 +26,21 @@ class Encoder{
       }
 
       char modletter = (char) asciival;
-      System.out.print(modletter); 
+      pen.print(modletter); 
     }
-    System.out.println();
+    pen.println();
   }
 }
 
 class Decoder{
   /**
-   * This class contains the Decoding algorithm and is only called when user writes "decode" in input
+   * The decoding algorithm which takes one letter from the string and undoes the shift by the corresponding key value
    * @param ciphertext  - String with the ciphertext
    * @param key - int with the key used to decode the ciphertext
    */
   public static void decodingAlgo(String ciphertext, int key){
+    java.io.PrintWriter pen;
+    pen = new java.io.PrintWriter(System.out, true);
     for (int i = 0; i < ciphertext.length(); i++) {
       char letter = ciphertext.charAt(i);
       int asciival = (int)letter - key;
@@ -50,9 +54,9 @@ class Decoder{
       }
 
       char modletter = (char) asciival;
-      System.out.print(modletter); 
+      pen.print(modletter); 
     }
-    System.out.println();
+    pen.println();
   }
 }
 
@@ -62,9 +66,11 @@ class InputHandling{
    * @param args - array of strings of arguments
    */
   public static void argno(String args[]){
+    java.io.PrintWriter pen;
+    pen = new java.io.PrintWriter(System.out, true);
     if (args.length != 2){
       System.err.println("Incorrect number of parameters");
-      System.out.println();
+      pen.println();
       System.exit(2);
     }
   }
@@ -75,24 +81,30 @@ class InputHandling{
    * @param plaintext - second argument
    */
   public static void command(String cmd, String userinput){
+    java.io.PrintWriter pen;
+    pen = new java.io.PrintWriter(System.out, true);
     if (!cmd.equals("encode") && !cmd.equals("decode")) {
       System.err.println("Valid options are \"encode\" or \"decode\"");
-      System.out.println();
+      pen.println();
       System.exit(1);
     }
 
     if (cmd.equals("encode")) {
       for (int i = 0; i < 26; i++) {
-        System.out.print("n = " + i +": ");
+        pen.print("n = " + i +": " );
+        pen.flush();
         Encoder.encodingAlgo(userinput,i);
       } 
+      pen.println();
     }
 
     if (cmd.equals("decode")) {
       for (int i = 0; i < 26; i++) {
-        System.out.print("n = " + i +": ");
+        pen.print("n = " + i +": ");
+        pen.flush();
         Decoder.decodingAlgo(userinput,i);
       } 
+      pen.println();
     }
   }
 }
@@ -105,6 +117,5 @@ public class CaeserCipher {
   public static void main(String args[]){
     InputHandling.argno(args);
     InputHandling.command(args[0],args[1]);
-    System.out.println();
   }
 }
