@@ -73,6 +73,7 @@ class InputHandling{
       pen.println();
       System.exit(2);
     }
+    InputHandling.command(args[0],args[1]);
   }
 
   /**
@@ -116,6 +117,6 @@ public class CaeserCipher {
    */
   public static void main(String args[]){
     InputHandling.argno(args);
-    InputHandling.command(args[0],args[1]);
+
   }
 }
