@@ -85,6 +85,7 @@ class InputHandling {
       pen.println();
       System.exit(0);
     }
+    InputHandling.command(args[0], args[1], args[2]);
   }
 
   /**
@@ -121,6 +122,5 @@ public class VigenereCipher {
    */
   public static void main(String args[]) {
     InputHandling.argno(args);
-    InputHandling.command(args[0], args[1], args[2]);
   }
 }
