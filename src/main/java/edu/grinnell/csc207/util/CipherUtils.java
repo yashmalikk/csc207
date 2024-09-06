@@ -90,4 +90,22 @@ public static String caesarDecrypt(String cipherText, char key) {
     }
     return decryptText;
   }
+
+
+  public static void command(String cmd, String userinput){
+    java.io.PrintWriter pen;
+    pen = new java.io.PrintWriter(System.out, true);
+    
+    if (!cmd.equals("encode") && !cmd.equals("decode")) {
+      System.err.println("Valid options are \"encode\" or \"decode\"");
+      pen.println();
+      System.exit(1);
+    }
+
+    if (cmd.equals("encode")) {
+    }
+
+    if (cmd.equals("decode")) {
+    }
+  }
 }
