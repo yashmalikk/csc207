@@ -1,3 +1,5 @@
+package edu.grinnell.csc207.util;
+
 /**
  * @author Yash Malik
  * For CSC-207 Fall 2024 with Professor Rebelsky
