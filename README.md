@@ -1,3 +1,11 @@
+Made by: Yash Malik
+This submission contains 2 java files and 1 readme.md file. The java files are encryption/decryption programs using different methods of encryption.
+
+No resources outside of class were used to create the above mentioned java files.
+
+The project may also be found at: https://github.com/yashmalikk/csc207/tree/main/mini-project-1
+
+
 ## Getting Started
 
 Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
@@ -15,5 +23,5 @@ Meanwhile, the compiled output files will be generated in the `bin` folder by de
 
 ## Dependency Management
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
-This contains all of the mini-projects, assignments or other related materials to CSC-207 Fa2024 with Professor Rebelsky @ Grinnell College
+
+
