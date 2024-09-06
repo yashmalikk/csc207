@@ -4,7 +4,8 @@
  * Mini-Project Number 1
  */
 
-public class VigenereCipher {
+
+class Encoder {
   /**
    * The encoding algorithm which takes one letter from the string and shifts by the corresponding letter from the key
    * @param plaintext  - string with the plaintext
@@ -32,8 +33,10 @@ public class VigenereCipher {
     }
     pen.println();
   }
+}
 
-   /**
+class Decoder {
+  /**
    * The decoding algorithm which takes one letter from the string and undoes the shift by the corresponding letter from the key
    * @param ciphertext  - String with the ciphertext 
    * @param keyword - String with the key used to decode the ciphertext
@@ -60,7 +63,9 @@ public class VigenereCipher {
     }
     pen.println();
   }
+}
 
+class InputHandling {
   /**
    * Validates the number of arguments passed in the program.
    * @param args - array of strings of arguments
@@ -80,10 +85,10 @@ public class VigenereCipher {
       pen.println();
       System.exit(0);
     }
-    VigenereCipher.command(args[0], args[1], args[2]);
+    InputHandling.command(args[0], args[1], args[2]);
   }
 
-   /**
+  /**
    * Executes appropriate command based on first argument (i.e. encode or decode)
    * @param cmd - first argument
    * @param userinput - second argument
@@ -99,22 +104,23 @@ public class VigenereCipher {
     }
 
     if (cmd.equals("encode")) {
-      VigenereCipher.encodingAlgo(userinput, keyword); 
+      Encoder.encodingAlgo(userinput, keyword); 
       pen.println();
     }
 
     if (cmd.equals("decode")) {
-      VigenereCipher.decodingAlgo(userinput, keyword);
+      Decoder.decodingAlgo(userinput, keyword);
       pen.println();
     }
   }
+}
 
-
+public class VigenereCipher {
   /**
    * Main method that handles program execution
    * @param args - array of passed arguments
    */
   public static void main(String args[]) {
-    VigenereCipher.argno(args);
+    InputHandling.argno(args);
   }
 }

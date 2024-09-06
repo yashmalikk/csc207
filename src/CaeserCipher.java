@@ -3,8 +3,8 @@
  * For CSC-207 Fall 2024 with Professor Rebelsky
  * Mini-Project Number 1
 */
-public class CaeserCipher {
-  
+
+class Encoder{
   /**
    * The encoding algorithm which takes one letter from the string and shifts by the key value
    * @param plaintext  - String with the plaintext
@@ -30,7 +30,9 @@ public class CaeserCipher {
     }
     pen.println();
   }
+}
 
+class Decoder{
   /**
    * The decoding algorithm which takes one letter from the string and undoes the shift by the corresponding key value
    * @param ciphertext  - String with the ciphertext
@@ -56,7 +58,9 @@ public class CaeserCipher {
     }
     pen.println();
   }
+}
 
+class InputHandling{
   /**
    * Validated the number of arguments passed in the program.
    * @param args - array of strings of arguments
@@ -69,7 +73,7 @@ public class CaeserCipher {
       pen.println();
       System.exit(2);
     }
-    CaeserCipher.command(args[0],args[1]);
+    InputHandling.command(args[0],args[1]);
   }
 
   /**
@@ -90,7 +94,7 @@ public class CaeserCipher {
       for (int i = 0; i < 26; i++) {
         pen.print("n = " + i +": " );
         pen.flush();
-        CaeserCipher.encodingAlgo(userinput,i);
+        Encoder.encodingAlgo(userinput,i);
       } 
       pen.println();
     }
@@ -99,17 +103,20 @@ public class CaeserCipher {
       for (int i = 0; i < 26; i++) {
         pen.print("n = " + i +": ");
         pen.flush();
-        CaeserCipher.decodingAlgo(userinput,i);
+        Decoder.decodingAlgo(userinput,i);
       } 
       pen.println();
     }
   }
+}
 
+public class CaeserCipher {
   /**
    * Main method that handles program execution
    * @param args - array of passed arguments
    */
   public static void main(String args[]){
-    CaeserCipher.argno(args);
+    InputHandling.argno(args);
+
   }
 }
