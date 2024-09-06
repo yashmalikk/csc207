@@ -20,9 +20,10 @@ class Encoder{
       if (asciival > 122) {
         asciival = asciival - 26;
       }
-      
+
 
       else if (asciival < 97) {
+      
         asciival = asciival + 26;
       }
 
