@@ -77,6 +77,7 @@ public class Cipher {
         } // Decides if we need to encode or decode.
       } // Decides which Cipher type is needed.
     } // Ensures 4 inputs were given.
+    pen.println();
     pen.close();
   } // End of main function.
-} // End of Cipher class.
+} // End of Cipher
