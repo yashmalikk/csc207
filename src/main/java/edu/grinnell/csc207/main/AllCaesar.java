@@ -6,12 +6,16 @@ import edu.grinnell.csc207.util.CipherUtils;
 public class AllCaesar {
   public static void main(String[] args) {
     PrintWriter pen = new PrintWriter(System.out, true);
-    String str = "helloworld";
 
-    for (char ch = 'a'; ch <= 'z'; ch++) {
-      pen.printf("n = %d: %s\n", CipherUtils.letter2int(ch) - 'a' , CipherUtils.caesarEncrypt(str, ch));
+    if (args.length != 2) {
+      System.err.println("Error: Incorrect number of parameters.");
     }
     
+    else{
+      CipherUtils.command(args[0], args[1]);
+    }
+
+    pen.printf("\n");
     pen.close();
   }
 }
