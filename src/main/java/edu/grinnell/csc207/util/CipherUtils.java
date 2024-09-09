@@ -120,22 +120,20 @@ public class CipherUtils {
     } // Ensures only encode or decode is entered.
 
     if (cmd.equals("encode")) {
-      int ascii = 'a';
       for (char ch = 'a'; ch <= 'z'; ch++) {
         String outputString = CipherUtils.caesarEncrypt(userinput, CipherUtils.int2letter(ch));
         if (outputString != "") {
-          pen.printf("n = %d: %s\n", (CipherUtils.letter2int(ch) - ascii), outputString);
+          pen.printf("n = %c: %s\n", ch, outputString);
         } else {
           break;
         } // Terminates program if non-lowercase letter string is entered.
       } // Loops for all 26 versions of encryped strings.
     } // Only runs if string is to be encoded.
     if (cmd.equals("decode")) {
-      int ascii = 'a';
       for (char ch = 'a'; ch <= 'z'; ch++) {
         String outputString = CipherUtils.caesarDecrypt(userinput, CipherUtils.int2letter(ch));
         if (outputString != "") {
-          pen.printf("n = %d: %s\n", (CipherUtils.letter2int(ch) - ascii), outputString);
+          pen.printf("n = %c: %s\n", ch, outputString);
         } else {
           break;
         } // Terminates program if non-lowercase letter string is entered.
