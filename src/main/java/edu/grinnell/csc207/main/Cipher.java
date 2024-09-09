@@ -1,8 +1,8 @@
 /**
  * @author: Yash Malik
  *  This program is meant to be run with 4 arguments.
- * -encode or -decode decides if message must be encoded or decoded.
- * -vigenere or -caeser decides which algorithm to encode/decode with.
+ * -encode or -decode decides if message must be encoded or decoded. (you can also use -e or -d)
+ * -vigenere or -caeser decides which algorithm to encode/decode with. (you can also use -v or -c)
  * CaeserCipher key must be a character.
  * all inputs must be lowercase.
  * Made for CSC207 2024 Fa.
