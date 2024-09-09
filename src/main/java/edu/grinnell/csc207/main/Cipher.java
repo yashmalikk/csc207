@@ -1,3 +1,12 @@
+/**
+ * @author: Yash Malik
+ *  This program is meant to be run with 4 arguments.
+ * -encode or -decode decides if message must be encoded or decoded.
+ * -vigenere or -caeser decides which algorithm to encode/decode with.
+ * CaeserCipher key must be a character.
+ * all inputs must be lowercase.
+ * Made for CSC207 2024 Fa.
+*/
 package edu.grinnell.csc207.main;
 
 import java.io.PrintWriter;
@@ -63,13 +72,13 @@ public class Cipher {
         } // Checks to make sure key entered in case of CaeserCipher is a lowercase letter.
         if (keyString.length() != 1) {
           System.err.println("Error: Caeser Cipher must have a single character as key.");
-        } else {// Checks to make sure key entered in case of CaeserCipher is a char.
+        } else { // Checks to make sure key entered in case of CaeserCipher is a char.
           if (objectiveType == "Encode") {
             pen.print(CipherUtils.caesarEncrypt(inputString, keyChar));
           } else {
             pen.print(CipherUtils.caesarDecrypt(inputString, keyChar));
           } // Decides if we need to encode or decode.
-         } // Checks to make sure key entered in case of CaeserCipher is a char. 
+        } // Checks to make sure key entered in case of CaeserCipher is a char.
         pen.println();
       } else {
         if (objectiveType == "Encode") {
