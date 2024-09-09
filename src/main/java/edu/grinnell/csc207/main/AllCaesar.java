@@ -3,7 +3,7 @@
  * This program is meant to be run with 2 argumentss:
  * encode or decode must one of the arguments.
  * Made for CSC207 2024Fa.
- */
+*/
 package edu.grinnell.csc207.main;
 
 import java.io.PrintWriter;
