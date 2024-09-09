@@ -15,11 +15,11 @@ import edu.grinnell.csc207.util.CipherUtils;
 /**
  * This class contains the code to comprehend if user is trying to Encrypt or Decrypt a message
  * And which algorithm i.e. Caeser Cipher or Vigenere Cipher algorithm.
- */
+*/
 public class Cipher {
   /**
    * @param args - an array of the arguments that this function is called with.
-   */
+  */
   public static void main(String[] args) {
     PrintWriter pen = new PrintWriter(System.out, true);
     String inputString = "";

@@ -12,12 +12,12 @@ import edu.grinnell.csc207.util.CipherUtils;
 /**
  * This class contains code that allows the program to utilize all methods in CipherUtils.
  * The CipherUtils.command method reads input and performs tasks as needed.
- */
+*/
 
 public class AllCaesar {
   /**
    * @param args - an array of the arguments that this function is called with.
-   */
+  */
   public static void main(String[] args) {
     PrintWriter pen = new PrintWriter(System.out, true);
     if (args.length != 2) {

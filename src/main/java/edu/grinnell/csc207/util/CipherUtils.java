@@ -8,12 +8,12 @@ package edu.grinnell.csc207.util;
 /**
  * This class contains all necessary methods to encrypt/decrypt with
  * Caeser Cipher or Vigenere Cipher algos.
- */
+*/
 public class CipherUtils {
   /**
    * @param letter letter to return as int.
    * @return gives us the int value of letter.
-   */
+  */
   public static int letter2int(char letter) {
     int asciival = (int) letter;
     return asciival;
@@ -21,7 +21,7 @@ public class CipherUtils {
   /**
    * @param asciival int to return as letter.
    * @return gives us the char corresponding to ascii (asciival).
-   */
+  */
   public static char int2letter(int asciival) {
     char modletter = (char) asciival;
     return modletter;
@@ -30,7 +30,7 @@ public class CipherUtils {
    * @param plainText string that contains text to be encrypted.
    * @param key decides the offset for the cypher.
    * @return gives us the Caeser encrypted string.
-   */
+  */
   public static String caesarEncrypt(String plainText, char key) {
     String encryptText = "";
     int alphabetsize = 'z' - 'a' + 1;
@@ -52,7 +52,7 @@ public class CipherUtils {
    * @param cipherText string that contains the text to be decrypted.
    * @param key decides the offset for the cipher.
    * @return gives us the Caeser decrypted string.
-   */
+  */
   public static String caesarDecrypt(String cipherText, char key) {
     int alphabetsize = 'z' - 'a' + 1;
     String decryptText = "";
@@ -74,7 +74,7 @@ public class CipherUtils {
    * @param plainText string that contains the text to be encrypted.
    * @param keyword string that contains the key to encrypt with.
    * @return gives us the Vigenere encryped string.
-   */
+  */
   public static String vigenereEncrypt(String plainText, String keyword) {
     String encryptText = "";
     int alphabetsize = 'z' - 'a' + 1;
@@ -96,7 +96,7 @@ public class CipherUtils {
    * @param cipherText string that contains the text to be decryped.
    * @param keyword string that gives us the key to decrypt with.
    * @return gives us the Vigenere decrypted string.
-   */
+  */
   public static String vigenereDecrypt(String cipherText, String keyword) {
     String decryptText = "";
     int alphabetsize = 'z' - 'a' + 1;
@@ -115,7 +115,7 @@ public class CipherUtils {
   /**
    * @param cmd contains the instruction to encode or decode.
    * @param userinput contains the key for Caeser Cipher.
-   */
+  */
   public static void command(String cmd, String userinput) {
     java.io.PrintWriter pen;
     pen = new java.io.PrintWriter(System.out, true);
