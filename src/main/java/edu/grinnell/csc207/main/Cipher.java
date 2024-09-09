@@ -69,15 +69,16 @@ public class Cipher {
         } else {
           pen.print(CipherUtils.caesarDecrypt(inputString, keyChar));
         } // Decides if we need to encode or decode.
+        pen.println();
       } else {
         if (objectiveType == "Encode") {
           pen.print(CipherUtils.vigenereEncrypt(inputString, keyString));
         } else {
           pen.print(CipherUtils.vigenereDecrypt(inputString, keyString));
         } // Decides if we need to encode or decode.
+        pen.println();
       } // Decides which Cipher type is needed.
     } // Ensures 4 inputs were given.
-    pen.println();
     pen.close();
   } // End of main function.
 } // End of Cipher
