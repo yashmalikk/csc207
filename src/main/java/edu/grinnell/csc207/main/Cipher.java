@@ -65,9 +65,9 @@ public class Cipher {
           System.err.println("Error: Caeser Cipher must have a single character as key.");
         } // Checks to make sure key entered in case of CaeserCipher is a char.
         if (objectiveType == "Encode") {
-          pen.print(CipherUtils.caesarEncrypt(objectiveType, keyChar));
+          pen.print(CipherUtils.caesarEncrypt(inputString, keyChar));
         } else {
-          pen.print(CipherUtils.caesarDecrypt(cipherType, keyChar));
+          pen.print(CipherUtils.caesarDecrypt(inputString, keyChar));
         } // Decides if we need to encode or decode.
       } else {
         if (objectiveType == "Encode") {
