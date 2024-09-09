@@ -56,7 +56,7 @@ public class Cipher {
       if (cipherType == "Caeser") {
         char keyChar = keyString.charAt(0);
         if (keyChar >= 'a' && keyChar <= 'z') {
-          int key = keyChar - 'a';
+          int key = keyChar;
           keyChar = CipherUtils.int2letter(key);
         } else {
           System.err.println("Error: Key must be a lowercase letter between 'a' and 'z'.");
