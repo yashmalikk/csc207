@@ -26,7 +26,6 @@ public class AllCaesar {
     } else {
       CipherUtils.command(args[0], args[1]);
     } // Program execution occurs after checking for valid number of parameters.
-    pen.printf("\n");
     pen.close();
   } // End of main function.
 } // End of AllCaesar Class.

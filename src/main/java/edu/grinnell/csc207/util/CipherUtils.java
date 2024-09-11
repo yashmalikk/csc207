@@ -123,7 +123,12 @@ public class CipherUtils {
       System.err.println("Error: Invalid option: " + "\"" + cmd
           + "\". " + "Valid options are \"encode\" or \"decode\".");
     } // Ensures only encode or decode is entered.
-
+    if (userinput.isEmpty()) {
+      for (char ch = 'a'; ch <= 'z'; ch++) {
+          pen.printf("n = %c: %s\n", ch, "");
+      } // Prints empty string for each shift.
+      return;
+    } // Special case for empty string input.
     if (cmd.equals("encode")) {
       for (char ch = 'a'; ch <= 'z'; ch++) {
         String outputString = CipherUtils.caesarEncrypt(userinput, CipherUtils.int2letter(ch));
