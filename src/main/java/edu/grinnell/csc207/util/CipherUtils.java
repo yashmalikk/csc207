@@ -125,7 +125,7 @@ public class CipherUtils {
     } // Ensures only encode or decode is entered.
     if (userinput.isEmpty()) {
       for (char ch = 'a'; ch <= 'z'; ch++) {
-          pen.printf("n = %c: %s\n", ch, "");
+        pen.printf("n = %c: %s\n", ch, "");
       } // Prints empty string for each shift.
       return;
     } // Special case for empty string input.
